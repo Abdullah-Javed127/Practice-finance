@@ -10,9 +10,9 @@ saveBtn.addEventListener("click",function()
     {
         for(let x=0;x<inputFloor.value;x++)
         {
-            save[x]+=`<input id=inputJS><br>`;
+            save[x]+=`<input class="inputJS"><br>`;
         }
-        EnterBtn=`<button onclick="button()">save</button>`;
+        EnterBtn=`<button class="button" onclick="button()">save</button>`;
         list.innerHTML=save+EnterBtn;
         inputFloor.value=null;
     }
@@ -26,6 +26,6 @@ function button()
     {
         save[i].value=save[i].value+finalSave;
     }
-    alert(save[1].value);
+    alert(finalSave);
 }
 
