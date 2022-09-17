@@ -91,7 +91,10 @@ input:hover
     margin-top: 50px;
     width:750px;
     height: 150px;
-    background-color: grey;
+    background-color:rgb(122, 192, 227);
+    padding-left: 10px;
+    padding-top: 10px;
+    border-radius: 10px;
     display: flex;
     font-size: 20px;
 }
