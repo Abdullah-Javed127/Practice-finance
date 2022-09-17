@@ -1,31 +1,21 @@
-let inputFloor=document.getElementById("input-floor");
-let saveBtn=document.getElementById("save-button1");
-let list=document.getElementById("list");
-let EnterBtn="";
-let save=[];
-let finalSave="";
-EnterBtn=document.getElementById("list");
+let inputRent=document.getElementById("input-rent-cal");
+let enterBtn=document.getElementById("enter");
+let div=document.getElementById("div1");
 
-saveBtn.addEventListener("click",function()
-    {
-        for(let x=0;x<inputFloor.value;x++)
-        {
-            save[x]+=`<input class="inputJS"><br>`;
-        }
-        EnterBtn=`<button class="button" onclick="button()">save</button>`;
-        list.innerHTML=save+EnterBtn;
-        inputFloor.value=null;
-    }
-)
-
-
-function button()
+enterBtn.addEventListener("click",function()
 {
-    finalSave;
-    for(let i=0;i<inputFloor.value;i++)
-    {
-        save[i].value=save[i].value+finalSave;
-    }
-    alert(finalSave);
-}
+    let list=[];
+    let lists=[];
+    let listItems=[];
+    
+    list[0]=inputRent.value /30; 
+    list[1]=inputRent.value /4.29; 
+    list[2]=inputRent.value;
+    list[3]=inputRent.value*6;
+    list[4]=inputRent.value*12;
 
+    listItems=`${list[0]}<br>${list[1]}<br>${list[2]}<br>${list[3]}<br>${list[4]}`
+
+    inputRent.value=null;
+    div.innerHTML=listItems;
+})
